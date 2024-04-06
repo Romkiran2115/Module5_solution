@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Web App</title>
+<link rel="stylesheet" href="style.css">
+    <script>
+        // Define an array of possible category short names
+        var categoryShortNames = ["LUNCH", "DINNER", "SUSHI", "DRINKS", "DESSERTS"]; // Add more categories as needed
+
+        // Function to load a random category
+        function loadRandomCategory() {
+            // Get a random index within the range of categoryShortNames array
+            var randomIndex = Math.floor(Math.random() * categoryShortNames.length);
+            
+            // Get the random category short name
+            var randomCategoryShortName = categoryShortNames[randomIndex];
+            
+            // Call the loadMenuItems function with the random category short name
+            $dc.loadMenuItems(randomCategoryShortName);
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="tiles">
+            <div class="tile">
+                <a href="https://www.davidchuschinabistro.com" onclick="$dc.loadMenuItems('MENU');">
+                    <h2>Menu</h2>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://www.davidchuschinabistro.com" onclick="loadRandomCategory();">
+                    <h2>Specials</h2>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://www.google.com/maps" onclick="$dc.loadMenuItems('MAP');">
+                    <h2>Map</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include your other HTML code here -->
+
+    <!-- Example JavaScript code to simulate $dc.loadMenuItems -->
+    <script>
+        var $dc = {
+            loadMenuItems: function(categoryShortName) {
+                // This is a placeholder function to simulate loading menu items
+                console.log("Loading menu items for category: " + categoryShortName);
+            }
+        };
+    </script>
+</body>
+</html>

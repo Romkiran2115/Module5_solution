@@ -1,0 +1,39 @@
+body 
+    {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tiles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tile {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tile:last-child {
+    margin-right: 0;
+}
+
+.tile:hover {
+    background-color: #e0e0e0;
+}
+
+.tile h2 {
+    margin: 0;
+    color: #333;
+}
